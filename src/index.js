@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Card2 from './Card2';
+import './cards.css';
 
 
-//import Covid19 from './Covid19.jsx';
 
-import App1 from './App1';
+
 import reportWebVitals from './reportWebVitals';
 
 
@@ -28,8 +29,10 @@ root.render(
   
    
       <>
+      <Card2/>
+    
      
-      <App1/>
+     
       </>
    
   
