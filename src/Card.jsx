@@ -1,25 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
 
-
-
-
-function Card(props) {
-    return (
-        <>
-      <div className="cards">
-        <div className="card">
-          <img src={props.imgsrc} alt="myPic" className="card_img" />
-          <div className="card_info">
-            <span className="card_category">{props.title}</span>
-            <h3 className="card_title">{props.sname}</h3>
-            <a href={props.link} target="_blank" rel="noopener noreferrer">
-              <button>WATCH NOW</button>
-            </a>
-          </div>
+const Card= ({ title, price, features }) => {
+  return (
+    <div className="col-md-4">
+      <div className="card text-center shadow">
+        <div className="card-body">
+          <h3 className="card-title">{title}</h3>
+          <p className="display-6 text-primary">${price}/month</p>
+          <ul className="list-group list-group-flush">
+            {features.map((feature, index) => (
+              <li key={index} className="list-group-item">
+                ✔ {feature}
+              </li>
+            ))}
+          </ul>
+          <a href="#" className="btn btn-primary mt-3">
+            Buy Now
+          </a>
         </div>
       </div>
-      </>
-    );
-  }
-  export default Card;
+    </div>
+  );
+};
+
+export default Card;

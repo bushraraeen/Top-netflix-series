@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Card2 from './Card2';
-import './cards.css';
+
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
+
 
 
 
@@ -29,7 +31,9 @@ root.render(
   
    
       <>
-      <Card2/>
+      <BrowserRouter>
+    <App />
+  </BrowserRouter>
     
      
      
